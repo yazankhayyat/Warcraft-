@@ -11,8 +11,6 @@
 #import "Footman.h"
 #import "Barracks.h"
 
-// Now that our Barracks and Footman classes are initializable, lets allow the player to train a footman from their barracks
-// This of course costs the player some resources
 
 @interface Barracks()
 - (Footman *)trainFootman;
@@ -37,6 +35,9 @@
 	[super tearDown];
 	_barracks = nil;
 }
+
+// Now that our Barracks and Footman classes are initializable, lets allow the player to train a footman from their barracks
+// This of course costs the player some resources
 
 -(void)testTrainFootmanCosts135Gold
 {

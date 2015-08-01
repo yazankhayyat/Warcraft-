@@ -9,8 +9,6 @@
 #import <XCTest/XCTest.h>
 #import "Footman.h"
 
-// Units that can fight, such as the Footman, have both healthPoints points to indicate their healthPoints and attack power to indicate how much damage they deal to other units
-// As such, they must start off with a certain amount of each
 
 @interface Footman()
 - (int)healthPoints;
@@ -34,6 +32,10 @@
     [super tearDown];
     _footman = nil;
 }
+
+// Units that can fight, such as the Footman, have both healthPoints points to indicate their healthPoints and attack power to indicate how much damage they deal to other units
+// As such, they must start off with a certain amount of each
+
 
 - (void)testHasAndKnowItshealthPoints
 {

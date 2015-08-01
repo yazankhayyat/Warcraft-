@@ -10,11 +10,15 @@
 #import <XCTest/XCTest.h>
 #import "Barracks.h"
 #import "Footman.h"
-#import "WCMockBarracks.h"
 
-// A Barracks should only be able to train footmen if it has enough resources
-// Introduce a new method that checks to see if there are enough resources to train one
-// Of course, it should then also be leveraged by the train_footman method
+@interface Barracks()
+- (int)gold;
+- (int)food;
+- (void)setGold:(int)gold;
+- (void)setFood:(int)food;
+- (BOOL)canTrainFootman;
+- (Footman*)trainFootman;
+@end
 
 @interface WarCraftIII_Tests_04 : XCTestCase
 
@@ -22,12 +26,12 @@
 
 @implementation WarCraftIII_Tests_04
 {
-    WCMockBarracks *_barracks;
+   Barracks *_barracks;
 }
 
 - (void)setUp {
 	[super setUp];
-	_barracks = [WCMockBarracks new];
+	_barracks = [Barracks new];
 }
 
 - (void)tearDown {
@@ -35,43 +39,42 @@
 	_barracks = nil;
 }
 
--(WCMockBarracks *)barracks
-{
-    return _barracks;
-}
+// A Barracks should only be able to train footmen if it has enough resources
+// Introduce a new method that checks to see if there are enough resources to train one
+// Of course, it should then also be leveraged by the trainFootman method
 
 -(void)testcanTrainFootmanIfThereIsEnoughResources
 {
-    BOOL result = [self.barracks canTrainFootman];
+    BOOL result = [_barracks canTrainFootman];
     XCTAssertTrue(result, @"barracks should initially be able to train footman");
 }
 
 -(void)testcanTrainFootmanFalseIfThereIsntEnoughFood
 {
-    self.barracks.food = 1;
-    BOOL result = [self.barracks canTrainFootman];
+    _barracks.food = 1;
+    BOOL result = [_barracks canTrainFootman];
     XCTAssertFalse(result, @"barracks shouldn't be able to train footman if there is less than 2 food");
 }
 
 -(void)testcanTrainFootmanFalseIfThereIsntEnoughGold
 {
-    self.barracks.gold = 134;
-    BOOL result = [self.barracks canTrainFootman];
+    _barracks.gold = 134;
+    BOOL result = [_barracks canTrainFootman];
     XCTAssertFalse(result, @"barracks shouldn't be able to train footman if there is less than 135 gold");
 }
 
 -(void)testWillNotTrainFootmanWithoutEnoughResources
 {
-    self.barracks.food = 1;
-    Footman *result = [self.barracks trainFootman];
+    _barracks.food = 1;
+    Footman *result = [_barracks trainFootman];
     XCTAssertNil(result, @"barracks shouldn't be able to train footman if there is not enough resources");
 }
 
 -(void)testWillTrainFootmanWithEnoughResources
 {
-	self.barracks.food = 2;
-	self.barracks.gold = 135;
-    id result = [[self.barracks trainFootman] class];
+	_barracks.food = 2;
+	_barracks.gold = 135;
+    id result = [[_barracks trainFootman] class];
     id expected = [Footman class];
     XCTAssertEqualObjects(expected, result, @"barracks should train a footman with enough resources");
 }

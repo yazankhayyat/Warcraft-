@@ -8,14 +8,16 @@
 
 #import <XCTest/XCTest.h>
 #import "Footman.h"
-#import "OCMock.h"
-
-// A Footman should be able to attack other units as well as receive damage
-// Later on, other units such as the peasant will be incapable of attacking
+#import "Unit.h"
 
 @interface Footman()
-- (void)attack:(Footman *)enemy;
 - (void)damage:(int)damage;
+- (int)healthPoints;
+- (void)attack:(Unit *)enemy withDamage:(int)damage;
+@end
+
+@interface Unit()
+- (instancetype)initWithHP:(int)hp AP:(int)ap;
 - (int)healthPoints;
 @end
 
@@ -26,11 +28,13 @@
 @implementation WarCarftIII_Tests_07
 {
     Footman *_footman;
+    Unit *_unit;
 }
 
 - (void)setUp {
 	[super setUp];
 	_footman = [Footman new];
+    _unit = [[Unit alloc] initWithHP:50 AP:5];
 }
 
 - (void)tearDown {
@@ -38,13 +42,7 @@
 	_footman = nil;
 }
 
--(void)testAttackShouldDoDeal10APDamageToTheEnemyUnit
-{
-    id enemy = [OCMockObject mockForClass:[Footman class]];
-    [[enemy expect] damage:10];
-    [_footman attack:enemy];
-}
-
+// A Footman should be able to attack other units as well as receive damage
 
 -(void)testDamageShouldReduceTheUnithealthPointsBy
 {
@@ -53,4 +51,15 @@
     int expected = 56;
     XCTAssertEqual(expected,result);
 }
+
+-(void)testAttackShouldDoDeal10APDamageToTheEnemyUnit
+{
+    [_footman attack:_unit withDamage:10];
+    int result = [_unit healthPoints];
+    int expected = 40;
+    XCTAssertEqual(expected,result);
+
+}
+
+
 @end

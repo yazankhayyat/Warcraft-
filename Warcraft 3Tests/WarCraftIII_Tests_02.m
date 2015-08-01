@@ -10,7 +10,6 @@
 #import <XCTest/XCTest.h>
 #import "Barracks.h"
 
-// Resources allow you to create units. In our case (for simplicity), these resources will be stored directly within the barracks
 
 @interface Barracks()
 - (int)gold;
@@ -34,6 +33,8 @@
     [super tearDown];
     _barracks = nil;
 }
+
+// Resources allow you to create units. In our case (for simplicity), these resources will be stored directly within the barracks
 
 -(void)testStartsOffWith1000GoldResources
 {
