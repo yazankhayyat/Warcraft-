@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12F9E63C1B6C489000C0C6FB /* Barracks.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9E63B1B6C489000C0C6FB /* Barracks.m */; };
 		8311C6E5191CCB2300AF33F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8311C6E4191CCB2300AF33F3 /* Foundation.framework */; };
 		8311C6E7191CCB2300AF33F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8311C6E6191CCB2300AF33F3 /* CoreGraphics.framework */; };
 		8311C6E9191CCB2300AF33F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8311C6E8191CCB2300AF33F3 /* UIKit.framework */; };
@@ -23,19 +24,16 @@
 		8311C727191CCC7800AF33F3 /* WarCarftIII_Tests_01.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C71D191CCC7800AF33F3 /* WarCarftIII_Tests_01.m */; };
 		8311C728191CCC7800AF33F3 /* WarCarftIII_Tests_07.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C71E191CCC7800AF33F3 /* WarCarftIII_Tests_07.m */; };
 		8311C729191CCC7800AF33F3 /* WarCarftIII_Tests_08.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C71F191CCC7800AF33F3 /* WarCarftIII_Tests_08.m */; };
-		8311C72A191CCC7800AF33F3 /* WarCarftIII_Tests_10.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C720191CCC7800AF33F3 /* WarCarftIII_Tests_10.m */; };
 		8311C72B191CCC7800AF33F3 /* WarCraftIII_Tests_02.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C721191CCC7800AF33F3 /* WarCraftIII_Tests_02.m */; };
 		8311C72C191CCC7800AF33F3 /* WarCraftIII_Tests_03.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C722191CCC7800AF33F3 /* WarCraftIII_Tests_03.m */; };
 		8311C72D191CCC7800AF33F3 /* WarCraftIII_Tests_04.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C723191CCC7800AF33F3 /* WarCraftIII_Tests_04.m */; };
 		8311C72E191CCC7800AF33F3 /* WarCraftIII_Tests_05.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C724191CCC7800AF33F3 /* WarCraftIII_Tests_05.m */; };
 		8311C72F191CCC7800AF33F3 /* WarCraftIII_Tests_06.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C725191CCC7800AF33F3 /* WarCraftIII_Tests_06.m */; };
 		8311C730191CCC7800AF33F3 /* WarCraftIII_Tests_09.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C726191CCC7800AF33F3 /* WarCraftIII_Tests_09.m */; };
-		8311C73B191CCCCD00AF33F3 /* Barracks.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C732191CCCCD00AF33F3 /* Barracks.m */; };
 		8311C73C191CCCCD00AF33F3 /* Footman.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C734191CCCCD00AF33F3 /* Footman.m */; };
 		8311C73D191CCCCD00AF33F3 /* Peasant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C736191CCCCD00AF33F3 /* Peasant.m */; };
 		8311C73E191CCCCD00AF33F3 /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C738191CCCCD00AF33F3 /* Unit.m */; };
 		8311C73F191CCCCD00AF33F3 /* WarCarftIII.1 in Resources */ = {isa = PBXBuildFile; fileRef = 8311C73A191CCCCD00AF33F3 /* WarCarftIII.1 */; };
-		8311C748191D63C600AF33F3 /* WCMockBarracks.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311C747191D63C600AF33F3 /* WCMockBarracks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12F9E63A1B6C489000C0C6FB /* Barracks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barracks.h; sourceTree = "<group>"; };
+		12F9E63B1B6C489000C0C6FB /* Barracks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barracks.m; sourceTree = "<group>"; };
 		8311C6E1191CCB2300AF33F3 /* Warcraft 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Warcraft 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8311C6E4191CCB2300AF33F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8311C6E6191CCB2300AF33F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,15 +68,12 @@
 		8311C71D191CCC7800AF33F3 /* WarCarftIII_Tests_01.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarCarftIII_Tests_01.m; sourceTree = "<group>"; };
 		8311C71E191CCC7800AF33F3 /* WarCarftIII_Tests_07.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarCarftIII_Tests_07.m; sourceTree = "<group>"; };
 		8311C71F191CCC7800AF33F3 /* WarCarftIII_Tests_08.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarCarftIII_Tests_08.m; sourceTree = "<group>"; };
-		8311C720191CCC7800AF33F3 /* WarCarftIII_Tests_10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarCarftIII_Tests_10.m; sourceTree = "<group>"; };
 		8311C721191CCC7800AF33F3 /* WarCraftIII_Tests_02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarCraftIII_Tests_02.m; sourceTree = "<group>"; };
 		8311C722191CCC7800AF33F3 /* WarCraftIII_Tests_03.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarCraftIII_Tests_03.m; sourceTree = "<group>"; };
 		8311C723191CCC7800AF33F3 /* WarCraftIII_Tests_04.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarCraftIII_Tests_04.m; sourceTree = "<group>"; };
 		8311C724191CCC7800AF33F3 /* WarCraftIII_Tests_05.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarCraftIII_Tests_05.m; sourceTree = "<group>"; };
 		8311C725191CCC7800AF33F3 /* WarCraftIII_Tests_06.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarCraftIII_Tests_06.m; sourceTree = "<group>"; };
 		8311C726191CCC7800AF33F3 /* WarCraftIII_Tests_09.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarCraftIII_Tests_09.m; sourceTree = "<group>"; };
-		8311C731191CCCCD00AF33F3 /* Barracks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barracks.h; sourceTree = "<group>"; };
-		8311C732191CCCCD00AF33F3 /* Barracks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barracks.m; sourceTree = "<group>"; };
 		8311C733191CCCCD00AF33F3 /* Footman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Footman.h; sourceTree = "<group>"; };
 		8311C734191CCCCD00AF33F3 /* Footman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Footman.m; sourceTree = "<group>"; };
 		8311C735191CCCCD00AF33F3 /* Peasant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Peasant.h; sourceTree = "<group>"; };
@@ -91,8 +88,6 @@
 		8311C743191CCD1400AF33F3 /* OCMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OCMock.h; path = usr/lib/OCMock/OCMock.h; sourceTree = "<group>"; };
 		8311C744191CCD1400AF33F3 /* OCMockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OCMockObject.h; path = usr/lib/OCMock/OCMockObject.h; sourceTree = "<group>"; };
 		8311C745191CCD1400AF33F3 /* OCMockRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OCMockRecorder.h; path = usr/lib/OCMock/OCMockRecorder.h; sourceTree = "<group>"; };
-		8311C746191D63C600AF33F3 /* WCMockBarracks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMockBarracks.h; sourceTree = "<group>"; };
-		8311C747191D63C600AF33F3 /* WCMockBarracks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMockBarracks.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +150,8 @@
 		8311C6EA191CCB2300AF33F3 /* Warcraft 3 */ = {
 			isa = PBXGroup;
 			children = (
-				8311C731191CCCCD00AF33F3 /* Barracks.h */,
-				8311C732191CCCCD00AF33F3 /* Barracks.m */,
+				12F9E63A1B6C489000C0C6FB /* Barracks.h */,
+				12F9E63B1B6C489000C0C6FB /* Barracks.m */,
 				8311C733191CCCCD00AF33F3 /* Footman.h */,
 				8311C734191CCCCD00AF33F3 /* Footman.m */,
 				8311C735191CCCCD00AF33F3 /* Peasant.h */,
@@ -187,8 +182,6 @@
 		8311C703191CCB2300AF33F3 /* Warcraft 3Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8311C746191D63C600AF33F3 /* WCMockBarracks.h */,
-				8311C747191D63C600AF33F3 /* WCMockBarracks.m */,
 				8311C71D191CCC7800AF33F3 /* WarCarftIII_Tests_01.m */,
 				8311C721191CCC7800AF33F3 /* WarCraftIII_Tests_02.m */,
 				8311C722191CCC7800AF33F3 /* WarCraftIII_Tests_03.m */,
@@ -198,7 +191,6 @@
 				8311C71E191CCC7800AF33F3 /* WarCarftIII_Tests_07.m */,
 				8311C71F191CCC7800AF33F3 /* WarCarftIII_Tests_08.m */,
 				8311C726191CCC7800AF33F3 /* WarCraftIII_Tests_09.m */,
-				8311C720191CCC7800AF33F3 /* WarCarftIII_Tests_10.m */,
 				8311C704191CCB2300AF33F3 /* Supporting Files */,
 			);
 			path = "Warcraft 3Tests";
@@ -326,10 +318,10 @@
 			files = (
 				8311C73C191CCCCD00AF33F3 /* Footman.m in Sources */,
 				8311C6F5191CCB2300AF33F3 /* WCAppDelegate.m in Sources */,
+				12F9E63C1B6C489000C0C6FB /* Barracks.m in Sources */,
 				8311C73D191CCCCD00AF33F3 /* Peasant.m in Sources */,
 				8311C73E191CCCCD00AF33F3 /* Unit.m in Sources */,
 				8311C6F1191CCB2300AF33F3 /* main.m in Sources */,
-				8311C73B191CCCCD00AF33F3 /* Barracks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,8 +338,6 @@
 				8311C728191CCC7800AF33F3 /* WarCarftIII_Tests_07.m in Sources */,
 				8311C729191CCC7800AF33F3 /* WarCarftIII_Tests_08.m in Sources */,
 				8311C730191CCC7800AF33F3 /* WarCraftIII_Tests_09.m in Sources */,
-				8311C72A191CCC7800AF33F3 /* WarCarftIII_Tests_10.m in Sources */,
-				8311C748191D63C600AF33F3 /* WCMockBarracks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

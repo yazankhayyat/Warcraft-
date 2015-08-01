@@ -10,7 +10,6 @@
 #import <XCTest/XCTest.h>
 #import "Barracks.h"
 
-// Resources allow you to create units. In our case (for simplicity), these resources will be stored directly within the barracks
 
 @interface Barracks()
 - (int)gold;
@@ -21,23 +20,32 @@
 
 @end
 
-@implementation WarCraftIII_Tests_02
-
--(Barracks *)barracks
-{
-    return [Barracks new];
+@implementation WarCraftIII_Tests_02{
+    Barracks *_barracks;
 }
+
+- (void)setUp {
+    [super setUp];
+    _barracks = [Barracks new];
+}
+
+- (void)tearDown {
+    [super tearDown];
+    _barracks = nil;
+}
+
+// Resources allow you to create units. In our case (for simplicity), these resources will be stored directly within the barracks
 
 -(void)testStartsOffWith1000GoldResources
 {
-    int result = self.barracks.gold;
+    int result = _barracks.gold;
     int expected = 1000;
     XCTAssertEqual((int)expected, (int)result, @"barracks should start off with 1000 gold resources");
 }
 
 -(void)testStartsOffWith80FoodResources
 {
-    int result = self.barracks.food;
+    int result = _barracks.food;
     int expected = 80;
     XCTAssertEqual((int)expected, (int)result, @"barracks should start off with 80 food resources");
 }

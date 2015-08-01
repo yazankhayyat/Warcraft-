@@ -10,7 +10,15 @@
 #import "Barracks.h"
 #import "Peasant.h"
 #import "Unit.h"
-#import "WCMockBarracks.h"
+
+@interface Barracks()
+- (int)gold;
+- (int)food;
+- (void)setGold:(int)gold;
+- (void)setFood:(int)food;
+- (Peasant*)trainPeasant;
+- (BOOL)canTrainPeasant;
+@end
 
 @interface WarCraftIII_Tests_09 : XCTestCase
 
@@ -18,13 +26,13 @@
 
 @implementation WarCraftIII_Tests_09
 {
-    WCMockBarracks *_barracks;
+    Barracks *_barracks;
 }
 
 - (void)setUp
 {
     [super setUp];
-    _barracks = [WCMockBarracks new];
+    _barracks = [Barracks new];
 }
 
 - (void)tearDown

@@ -10,27 +10,30 @@
 #import "Footman.h"
 #import "Unit.h"
 
-// Since a Footman is a type of Unit, it makes sense to now make Footman inherit from Unit
-// Furthermore,
-
-// This test doesn't look for it, but there are other things that you could do at this point. Think about what else you could refactor in the Footman class, now that it is inheriting functionality (code) from the Unit class.
-
-
 @interface WarCraftIII_Tests_06 : XCTestCase
 
 @end
 
-@implementation WarCraftIII_Tests_06
-
--(Footman *)footman
-{
-    return [Footman new];
+@implementation WarCraftIII_Tests_06{
+    Footman *_footman;
 }
 
+- (void)setUp {
+    [super setUp];
+    _footman = [Footman new];
+}
+
+- (void)tearDown {
+    [super tearDown];
+    _footman = nil;
+}
+
+// Since a Footman is a type of Unit, it makes sense to now make Footman inherit from Unit
+// Refactor Footman class, now that it is inheriting functionality (code) from the Unit class.
 
 -(void)testFootmanShouldBeAUnit
 {
-    XCTAssertTrue([self.footman isKindOfClass:[Unit class]], @"footman should be a kind of unit");
+    XCTAssertTrue([_footman isKindOfClass:[Unit class]], @"footman should be a kind of unit");
 }
 
 @end
