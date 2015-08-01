@@ -21,23 +21,30 @@
 
 @end
 
-@implementation WarCraftIII_Tests_02
+@implementation WarCraftIII_Tests_02{
+    Barracks *_barracks;
+}
 
--(Barracks *)barracks
-{
-    return [Barracks new];
+- (void)setUp {
+    [super setUp];
+    _barracks = [Barracks new];
+}
+
+- (void)tearDown {
+    [super tearDown];
+    _barracks = nil;
 }
 
 -(void)testStartsOffWith1000GoldResources
 {
-    int result = self.barracks.gold;
+    int result = _barracks.gold;
     int expected = 1000;
     XCTAssertEqual((int)expected, (int)result, @"barracks should start off with 1000 gold resources");
 }
 
 -(void)testStartsOffWith80FoodResources
 {
-    int result = self.barracks.food;
+    int result = _barracks.food;
     int expected = 80;
     XCTAssertEqual((int)expected, (int)result, @"barracks should start off with 80 food resources");
 }

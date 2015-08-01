@@ -91,8 +91,8 @@
 		8311C743191CCD1400AF33F3 /* OCMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OCMock.h; path = usr/lib/OCMock/OCMock.h; sourceTree = "<group>"; };
 		8311C744191CCD1400AF33F3 /* OCMockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OCMockObject.h; path = usr/lib/OCMock/OCMockObject.h; sourceTree = "<group>"; };
 		8311C745191CCD1400AF33F3 /* OCMockRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OCMockRecorder.h; path = usr/lib/OCMock/OCMockRecorder.h; sourceTree = "<group>"; };
-		8311C746191D63C600AF33F3 /* WCMockBarracks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMockBarracks.h; sourceTree = "<group>"; };
-		8311C747191D63C600AF33F3 /* WCMockBarracks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMockBarracks.m; sourceTree = "<group>"; };
+		8311C746191D63C600AF33F3 /* WCMockBarracks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCMockBarracks.h; path = "Warcraft 3Tests/WCMockBarracks.h"; sourceTree = SOURCE_ROOT; };
+		8311C747191D63C600AF33F3 /* WCMockBarracks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCMockBarracks.m; path = "Warcraft 3Tests/WCMockBarracks.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +163,8 @@
 				8311C736191CCCCD00AF33F3 /* Peasant.m */,
 				8311C737191CCCCD00AF33F3 /* Unit.h */,
 				8311C738191CCCCD00AF33F3 /* Unit.m */,
+				8311C746191D63C600AF33F3 /* WCMockBarracks.h */,
+				8311C747191D63C600AF33F3 /* WCMockBarracks.m */,
 				8311C739191CCCCD00AF33F3 /* WarCarftIII-Prefix.pch */,
 				8311C73A191CCCCD00AF33F3 /* WarCarftIII.1 */,
 				8311C6F3191CCB2300AF33F3 /* WCAppDelegate.h */,
@@ -187,8 +189,6 @@
 		8311C703191CCB2300AF33F3 /* Warcraft 3Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8311C746191D63C600AF33F3 /* WCMockBarracks.h */,
-				8311C747191D63C600AF33F3 /* WCMockBarracks.m */,
 				8311C71D191CCC7800AF33F3 /* WarCarftIII_Tests_01.m */,
 				8311C721191CCC7800AF33F3 /* WarCraftIII_Tests_02.m */,
 				8311C722191CCC7800AF33F3 /* WarCraftIII_Tests_03.m */,
