@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Unit.h"
 
-@interface Peasant : NSObject
+@interface Peasant : Unit
+
+- (void)setGold:(int)gold;
 
 @end
